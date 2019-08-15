@@ -13,6 +13,21 @@ namespace FakeMovieTheatre.Models
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Movie>().HasData(
+                new Movie
+                {
+                    ID = 1,
+                    Title = "The Never Ending story",
+                    Price = 5,
+                    Genre = "Name a pangolin and receive a plush.",
+                    ReleaseDate = DateTime.Now
+
+                });
+               
+        }
+
         public DbSet<FakeMovieTheatre.Models.Movie> Movie { get; set; }
     }
 }

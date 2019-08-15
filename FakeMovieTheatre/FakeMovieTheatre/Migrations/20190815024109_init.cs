@@ -23,6 +23,11 @@ namespace FakeMovieTheatre.Migrations
                 {
                     table.PrimaryKey("PK_Movie", x => x.ID);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Movie",
+                columns: new[] { "ID", "Genre", "Price", "ReleaseDate", "Title" },
+                values: new object[] { 1, "Name a pangolin and receive a plush.", 5m, new DateTime(2019, 8, 14, 19, 41, 9, 425, DateTimeKind.Local).AddTicks(2613), "The Never Ending story" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

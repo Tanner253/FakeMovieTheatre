@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FakeMovieTheatre.Migrations
 {
     [DbContext(typeof(FakeMovieTheatreContext))]
-    [Migration("20190812172637_init")]
+    [Migration("20190815024109_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,16 @@ namespace FakeMovieTheatre.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Movie");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Genre = "Name a pangolin and receive a plush.",
+                            Price = 5m,
+                            ReleaseDate = new DateTime(2019, 8, 14, 19, 41, 9, 425, DateTimeKind.Local).AddTicks(2613),
+                            Title = "The Never Ending story"
+                        });
                 });
 #pragma warning restore 612, 618
         }

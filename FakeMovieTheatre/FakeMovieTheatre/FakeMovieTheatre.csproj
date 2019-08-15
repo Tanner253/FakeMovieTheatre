@@ -14,11 +14,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Data\IMG\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <None Include="wwwroot\favicon.ico" />
     <None Include="wwwroot\images\spinny.MP4" />
   </ItemGroup>
