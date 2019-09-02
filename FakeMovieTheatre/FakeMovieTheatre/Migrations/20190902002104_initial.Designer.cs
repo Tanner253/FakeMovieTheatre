@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FakeMovieTheatre.Migrations
 {
     [DbContext(typeof(FakeMovieTheatreContext))]
-    [Migration("20190815024109_init")]
-    partial class init
+    [Migration("20190902002104_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,6 +29,8 @@ namespace FakeMovieTheatre.Migrations
 
                     b.Property<string>("Genre");
 
+                    b.Property<string>("Picture");
+
                     b.Property<decimal>("Price");
 
                     b.Property<DateTime>("ReleaseDate");
@@ -43,10 +45,29 @@ namespace FakeMovieTheatre.Migrations
                         new
                         {
                             ID = 1,
-                            Genre = "Name a pangolin and receive a plush.",
+                            Genre = "This is the never ending story, one of the best movies ever! Adventure",
+                            Picture = "images/neverendingstory.jpg",
                             Price = 5m,
-                            ReleaseDate = new DateTime(2019, 8, 14, 19, 41, 9, 425, DateTimeKind.Local).AddTicks(2613),
+                            ReleaseDate = new DateTime(2019, 9, 1, 17, 21, 4, 75, DateTimeKind.Local).AddTicks(2141),
                             Title = "The Never Ending story"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Genre = "Extreemely drawn out and boring until an hour in... suspensful and action!",
+                            Picture = "images/th2.jpg",
+                            Price = 42m,
+                            ReleaseDate = new DateTime(2019, 9, 1, 17, 21, 4, 76, DateTimeKind.Local).AddTicks(6992),
+                            Title = "King Kong"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Genre = "Comedy suspensful and action!",
+                            Picture = "images/th.jpg",
+                            Price = 69m,
+                            ReleaseDate = new DateTime(2019, 9, 1, 17, 21, 4, 76, DateTimeKind.Local).AddTicks(7007),
+                            Title = "This is the End"
                         });
                 });
 #pragma warning restore 612, 618
