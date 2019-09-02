@@ -44,7 +44,16 @@ namespace FakeMovieTheatre.Models
                           Genre = "Comedy suspensful and action!",
                           ReleaseDate = DateTime.Now,
                           Picture = "images/th.jpg"
-                      }
+                      },
+                                  new Movie
+                                  {
+                                      ID = 4,
+                                      Title = "Jurrassic park collection",
+                                      Price = 30,
+                                      Genre = "Action",
+                                      ReleaseDate = DateTime.Now,
+                                      Picture = "images/untitled.png"
+                                  }
                 );
 
         }
