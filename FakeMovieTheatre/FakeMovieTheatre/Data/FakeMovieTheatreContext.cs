@@ -12,7 +12,10 @@ namespace FakeMovieTheatre.Models
             : base(options)
         {
         }
-
+        /// <summary>
+        /// adds db set to the database for users to select content from - seeded data
+        /// </summary>
+        /// <param name="modelBuilder">the model being built is a database and contains the following data</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Movie>().HasData(
