@@ -21,6 +21,7 @@ namespace FakeMovieTheatre.Models
             modelBuilder.Entity<Movie>().HasData(
                 new Movie
                 {
+
                     ID = 1,
                     Title = "The Never Ending story",
                     Price = 5,
